@@ -10,6 +10,7 @@ import android.graphics.Bitmap;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v13.app.FragmentStatePagerAdapter;
 import android.support.v4.app.ShareCompat;
 import android.support.v4.view.ViewPager;
@@ -45,7 +46,7 @@ public class ArticleDetailActivity extends AppCompatActivity
     private ViewPager mPager;
     private MyPagerAdapter mPagerAdapter;
     private Toolbar toolbar;
-    private ImageButton shareFab;
+    private FloatingActionButton shareFab;
     private ImageView image;
 
     @Override
@@ -61,7 +62,7 @@ public class ArticleDetailActivity extends AppCompatActivity
         getLoaderManager().initLoader(0, null, this);
         toolbar=(Toolbar)findViewById(R.id.toolbar);
         toolbar.setNavigationIcon(R.drawable.ic_arrow_back);
-        shareFab=(ImageButton)findViewById(R.id.share_fab);
+        shareFab= (FloatingActionButton) findViewById(R.id.share_fab);
         image=(ImageView)findViewById(R.id.feed_image);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
